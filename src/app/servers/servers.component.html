@@ -1,0 +1,17 @@
+<p>
+servers works!
+</p>
+<div>
+<a
+[routerLink]="['/servers', 5, 'edit']"
+[queryParams]="{allowEdit:'1' }"
+fragment="loading"
+href="=#"
+*ngFor ="let server of servers">
+{{server.name}}
+</a>
+
+</div>
+<app-server></app-server>
+<app-edit-server></app-edit-server>
+<button (click)= "onreload()">Reload page</button>
